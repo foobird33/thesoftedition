@@ -33,7 +33,7 @@
     </section>
 
     <!-- Mission Section -->
-    <section id="mission" class="section mission">
+<section id="mission" class="section mission" data-aos="fade-up">
         <h2 class="section-title">Mission & Goal</h2>
         <div class="mission-content">
             <p>Our goal is to craft digital experiences that stand at the intersection of design, technology, and emotion.</p>
@@ -43,11 +43,11 @@
     </section>
 
     <!-- Work / Projects Grid -->
-    <section id="work" class="section work">
+<section id="work" class="section work" data-aos="fade-up">
         <h2 class="section-title">Selected Work</h2>
         <div class="projects-grid">
             <!-- Project 1 -->
-            <div class="project-card">
+<div class="project-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="project-image">
                     <!-- Placeholder for your image or video -->
                     <div class="image-placeholder">Video/Image Here</div>
@@ -57,7 +57,7 @@
                 <p class="project-desc">A visual experiment exploring rhythm and distortion through a minimal, industrial aesthetic.</p>
             </div>
             <!-- Project 2 -->
-            <div class="project-card">
+<div class="project-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="project-image">
                     <div class="image-placeholder">Video/Image Here</div>
                 </div>
@@ -70,7 +70,7 @@
     </section>
 
     <!-- Approach / Services -->
-    <section id="approach" class="section approach">
+<section id="approach" class="section approach" data-aos="fade-up">
         <h2 class="section-title">Our Approach</h2>
         <div class="services-list">
             <div class="service-item">
@@ -86,7 +86,7 @@
     </section>
 
     <!-- Footer / Contact -->
-    <footer id="contact" class="footer">
+<footer id="contact" class="footer" data-aos="fade-up">
         <div class="footer-content">
             <h2>Let's collaborate.</h2>
             <p>We work with founders and creative brands to translate vision into form and code.</p>
@@ -99,5 +99,16 @@
 
     <!-- Link to our simple JavaScript file -->
     <script src="script.js"></script>
+<!-- AOS Library for Scroll Animations -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // Initialize AOS
+  AOS.init({
+    duration: 800, // Animation duration in ms
+    once: true, // Animation happens only once
+    offset: 100 // When to trigger (px from bottom)
+  });
+</script>
 </body>
 </html>
