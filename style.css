@@ -469,15 +469,15 @@ h1, h2, h3, h4, .hero-title, .statement-large, .about-large,
     transform: scale(1.05);
 }
 
-/* Black transparent overlay box - ALWAYS VISIBLE */
+/* Black transparent overlay box - 50% SMALLER SIZE */
 .volume-overlay-box {
     position: absolute;
-    bottom: 30px;
-    right: 30px;
-    width: 380px;
+    bottom: 25px;
+    right: 25px;
+    width: 260px; /* Reduced from 380px */
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(10px);
-    padding: 30px;
+    padding: 20px; /* Reduced from 30px */
     opacity: 1;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -492,9 +492,9 @@ h1, h2, h3, h4, .hero-title, .statement-large, .about-large,
 
 .overlay-title {
     font-family: 'Oswald', sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.4rem; /* Slightly smaller */
     color: white;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-weight: 300;
     letter-spacing: 1px;
     line-height: 1.2;
@@ -502,15 +502,15 @@ h1, h2, h3, h4, .hero-title, .statement-large, .about-large,
 
 .overlay-desc {
     color: rgba(255, 255, 255, 0.85);
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: 20px;
+    font-size: 0.85rem; /* Smaller font */
+    line-height: 1.4;
+    margin-bottom: 15px;
     font-weight: 300;
 }
 
 .overlay-meta {
     color: rgba(255, 255, 255, 0.6);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 300;
     letter-spacing: 0.5px;
 }
@@ -521,15 +521,15 @@ h1, h2, h3, h4, .hero-title, .statement-large, .about-large,
 
 .coming-soon {
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 25px;
+    right: 25px;
     background: rgba(255, 255, 255, 0.95);
     color: #1a1a1a;
-    padding: 10px 20px;
-    font-size: 0.8rem;
+    padding: 8px 16px;
+    font-size: 0.75rem;
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
     font-weight: 300;
     z-index: 2;
 }
@@ -578,15 +578,18 @@ h1, h2, h3, h4, .hero-title, .statement-large, .about-large,
     width: 20px;
 }
 
-/* ===== FULL-WIDTH CINEMATIC BANNER (Edge-to-edge, no text) ===== */
+/* ===== FULL-WIDTH CINEMATIC BANNER (TRUE Edge-to-edge) ===== */
 .full-width-banner {
-    margin: 60px -60px;
     position: relative;
     height: 400px;
     overflow: hidden;
     width: 100vw;
     left: 50%;
-    transform: translateX(-50%);
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .banner-video-container {
@@ -772,17 +775,13 @@ h1, h2, h3, h4, .hero-title, .statement-large, .about-large,
         padding: 0 40px 60px 40px;
     }
     
-    .full-width-banner {
-        margin: 60px -40px;
-    }
-    
     .volumes-grid.staggered {
         gap: 40px 30px;
     }
     
     .volume-overlay-box {
-        width: 320px;
-        padding: 25px;
+        width: 230px;
+        padding: 18px;
     }
 }
 
@@ -800,10 +799,18 @@ h1, h2, h3, h4, .hero-title, .statement-large, .about-large,
     }
     
     .volume-overlay-box {
-        width: 280px;
-        padding: 20px;
+        width: 210px;
+        padding: 16px;
         bottom: 20px;
         right: 20px;
+    }
+    
+    .overlay-title {
+        font-size: 1.2rem;
+    }
+    
+    .overlay-desc {
+        font-size: 0.8rem;
     }
     
     .full-width-banner {
@@ -825,7 +832,7 @@ h1, h2, h3, h4, .hero-title, .statement-large, .about-large,
     }
     
     .volume-overlay-box {
-        width: 350px;
+        width: 280px;
     }
 }
 
@@ -851,8 +858,9 @@ h1, h2, h3, h4, .hero-title, .statement-large, .about-large,
     }
     
     .full-width-banner {
-        margin: 40px -20px;
         height: 250px;
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
     
     .cutoff-content {
@@ -887,18 +895,25 @@ h1, h2, h3, h4, .hero-title, .statement-large, .about-large,
     }
     
     .volume-overlay-box {
-        width: 280px;
-        padding: 20px;
-        bottom: 20px;
-        right: 20px;
+        width: 220px;
+        padding: 15px;
+        bottom: 15px;
+        right: 15px;
     }
     
     .overlay-title {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
     }
     
     .overlay-desc {
-        font-size: 0.9rem;
+        font-size: 0.75rem;
+    }
+    
+    .coming-soon {
+        top: 15px;
+        right: 15px;
+        padding: 6px 12px;
+        font-size: 0.7rem;
     }
     
     .view-all-container {
@@ -935,10 +950,10 @@ h1, h2, h3, h4, .hero-title, .statement-large, .about-large,
     }
     
     .volume-overlay-box {
-        width: 90%;
-        left: 5%;
-        right: 5%;
-        bottom: 20px;
+        width: 85%;
+        left: 7.5%;
+        right: 7.5%;
+        bottom: 15px;
     }
     
     .statement-text p,
