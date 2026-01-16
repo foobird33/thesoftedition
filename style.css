@@ -1,103 +1,218 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Importing the elegant "Inter" font from Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Simple icon library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <!-- Main Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">Portfolio</a>
-            <div class="nav-links">
-                <a href="#mission">Mission</a>
-                <a href="#work">Work</a>
-                <a href="#approach">Approach</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-    </nav>
+/* style.css */
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1 class="hero-title">We craft digital experiences with <span class="highlight">clarity</span> & <span class="highlight">emotion</span>.</h1>
-        <p class="hero-subtitle">A minimalist studio focused on design, motion, and technology.</p>
-    </section>
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #222;
+    background-color: #fefefe;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-    <!-- Mission Section -->
-    <section id="mission" class="section mission">
-        <h2 class="section-title">Mission & Goal</h2>
-        <div class="mission-content">
-            <p>Our goal is to craft digital experiences that stand at the intersection of design, technology, and emotion.</p>
-            <p>We believe that every interface has the power to express identity — not just through visuals, but through rhythm, movement, and the way it makes people feel.</p>
-            <p>We approach each project with the same intention: to strip away what’s unnecessary, to focus on what’s essential, and to build with clarity and precision.</p>
-        </div>
-    </section>
+/* Typography */
+h1, h2, h3 {
+    font-weight: 500;
+    line-height: 1.2;
+}
 
-    <!-- Work / Projects Grid -->
-    <section id="work" class="section work">
-        <h2 class="section-title">Selected Work</h2>
-        <div class="projects-grid">
-            <!-- Project 1 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <!-- Placeholder for your image or video -->
-                    <div class="image-placeholder">Video/Image Here</div>
-                </div>
-                <h3 class="project-title">Overmono</h3>
-                <p class="project-tags">Motion Design • Art Direction</p>
-                <p class="project-desc">A visual experiment exploring rhythm and distortion through a minimal, industrial aesthetic.</p>
-            </div>
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <div class="image-placeholder">Video/Image Here</div>
-                </div>
-                <h3 class="project-title">Likorn</h3>
-                <p class="project-tags">Motion Design • Art Direction</p>
-                <p class="project-desc">A digital study blending fluid simulations and minimal typography to create organic forms.</p>
-            </div>
-            <!-- Add more project cards as needed -->
-        </div>
-    </section>
+.highlight {
+    color: #555; /* A subtle highlight color */
+    font-weight: 500;
+}
 
-    <!-- Approach / Services -->
-    <section id="approach" class="section approach">
-        <h2 class="section-title">Our Approach</h2>
-        <div class="services-list">
-            <div class="service-item">
-                <h3><i class="fas fa-pen-fancy"></i> Creative Direction</h3>
-                <p>Codifying the creative language of your brand across every touchpoint for clarity and impact.</p>
-            </div>
-            <div class="service-item">
-                <h3><i class="fas fa-film"></i> Film & Motion Design</h3>
-                <p>Developing motion language and transitions to bring stories to life.</p>
-            </div>
-            <!-- Add more services -->
-        </div>
-    </section>
+/* Navigation */
+.navbar {
+    padding: 30px 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 40px;
+}
 
-    <!-- Footer / Contact -->
-    <footer id="contact" class="footer">
-        <div class="footer-content">
-            <h2>Let's collaborate.</h2>
-            <p>We work with founders and creative brands to translate vision into form and code.</p>
-            <a href="mailto:hello@example.com" class="contact-link">hello@example.com →</a>
-        </div>
-        <div class="footer-bottom">
-            <p>© <span id="current-year">2024</span> Your Portfolio Name. All rights reserved.</p>
-        </div>
-    </footer>
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    <!-- Link to our simple JavaScript file -->
-    <script src="script.js"></script>
-</body>
-</html>
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #222;
+}
+
+.nav-links a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #666;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #222;
+}
+
+/* Hero Section */
+.hero {
+    padding: 80px 0 120px 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3rem;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Common Section Styles */
+.section {
+    padding: 80px 0;
+    border-top: 1px solid #eee;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Mission Section */
+.mission-content p {
+    font-size: 1.4rem;
+    color: #444;
+    margin-bottom: 25px;
+    max-width: 800px;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.project-card {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 250px;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    margin-bottom: 20px;
+    border-radius: 2px;
+}
+
+.project-title {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.project-tags {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.project-desc {
+    color: #555;
+}
+
+/* Services List */
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.service-item {
+    padding: 25px;
+    background-color: #fafafa;
+    border-radius: 4px;
+}
+
+.service-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.service-item h3 i {
+    margin-right: 10px;
+    color: #777;
+}
+
+/* Footer */
+.footer {
+    padding: 80px 0 40px 0;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.footer-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.footer-content p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.contact-link {
+    font-size: 1.2rem;
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid #222;
+    padding-bottom: 3px;
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 0 15px;
+    }
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .nav-links a {
+        margin-left: 15px;
+        font-size: 0.9rem;
+    }
+    .projects-grid,
+    .services-list {
+        grid-template-columns: 1fr;
+    }
+}
