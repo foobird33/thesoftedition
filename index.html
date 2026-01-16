@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
+    <title>Portfolio | Cinematic Experience</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Importing the elegant "Inter" font from Google Fonts -->
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Simple icon library -->
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Scroll Animations Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Main Navigation -->
-    <nav class="navbar">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#" class="logo">Portfolio</a>
             <div class="nav-links">
@@ -26,91 +28,210 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1 class="hero-title">We craft digital experiences with <span class="highlight">clarity</span> & <span class="highlight">emotion</span>.</h1>
-        <p class="hero-subtitle">A minimalist studio focused on design, motion, and technology.</p>
-    </section>
-
-    <!-- Mission Section -->
-<section id="mission" class="section mission" data-aos="fade-up">
-        <h2 class="section-title">Mission & Goal</h2>
-        <div class="mission-content">
-            <p>Our goal is to craft digital experiences that stand at the intersection of design, technology, and emotion.</p>
-            <p>We believe that every interface has the power to express identity — not just through visuals, but through rhythm, movement, and the way it makes people feel.</p>
-            <p>We approach each project with the same intention: to strip away what’s unnecessary, to focus on what’s essential, and to build with clarity and precision.</p>
-        </div>
-    </section>
-
-    <!-- Work / Projects Grid -->
-<section id="work" class="section work" data-aos="fade-up">
-        <h2 class="section-title">Selected Work</h2>
-        <div class="projects-grid">
-            <!-- Project 1 -->
-<div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="project-image">
-                    <!-- Placeholder for your image or video -->
-<div class="project-media">
-  <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGUwNnB6Y3V5dzN0d3p5bHQya3ZqNG5qYW5rczN1dTdycGtxMmxkYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26tknCqiJrBQG6DrC/giphy.gif" alt="Animated placeholder">
-</div>
-                <h3 class="project-title">Overmono</h3>
-                <p class="project-tags">Motion Design • Art Direction</p>
-                <p class="project-desc">A visual experiment exploring rhythm and distortion through a minimal, industrial aesthetic.</p>
+    <!-- Main Cinematic Scroll Container -->
+    <div class="scroll-container">
+        
+        <!-- 1. STICKY VIDEO HERO SECTION -->
+        <section class="sticky-hero">
+            <div class="hero-video-container">
+                <!-- Video Background -->
+                <video autoplay loop muted playsinline class="hero-video">
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-blue-flow-1245-large.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay"></div>
+                
+                <!-- Hero Content -->
+                <div class="hero-content">
+                    <h1 class="hero-title">We craft digital experiences with <span class="highlight">clarity</span> & <span class="highlight">emotion</span>.</h1>
+                    <p class="hero-subtitle">Scroll to explore our approach</p>
+                    <div class="scroll-hint">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12l7 7 7-7"/>
+                        </svg>
+                    </div>
+                </div>
             </div>
-            <!-- Project 2 -->
-<div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="project-image">
-<div class="project-media">
-  <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGUwNnB6Y3V5dzN0d3p5bHQya3ZqNG5qYW5rczN1dTdycGtxMmxkYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26tknCqiJrBQG6DrC/giphy.gif" alt="Animated placeholder">
-</div>
-                <h3 class="project-title">Likorn</h3>
-                <p class="project-tags">Motion Design • Art Direction</p>
-                <p class="project-desc">A digital study blending fluid simulations and minimal typography to create organic forms.</p>
-            </div>
-            <!-- Add more project cards as needed -->
-        </div>
-    </section>
+        </section>
+        
+        <!-- 2. CUTOFF CONTENT SECTION (Rest of website) -->
+        <section class="cutoff-content">
+            <!-- Curved Cutoff Shape -->
+            <div class="cutoff-shape"></div>
+            
+            <!-- Your Website Content Starts Here -->
+            <div class="content-wrapper">
+                
+                <!-- Mission Section -->
+                <section id="mission" class="section mission" data-aos="fade-up">
+                    <h2 class="section-title">Mission & Goal</h2>
+                    <div class="mission-content">
+                        <p>Our goal is to craft digital experiences that stand at the intersection of design, technology, and emotion. We believe that every interface has the power to express identity — not just through visuals, but through rhythm, movement, and the way it makes people feel.</p>
+                        <p>We approach each project with the same intention: to strip away what's unnecessary, to focus on what's essential, and to build with clarity and precision.</p>
+                        <p>Our goal isn't only to design beautiful websites, but to create meaningful digital spaces where brands can communicate their truth with authenticity and style.</p>
+                    </div>
+                </section>
+                
+                <!-- Work Section -->
+                <section id="work" class="section work" data-aos="fade-up">
+                    <h2 class="section-title">Selected Work</h2>
+                    <div class="projects-grid">
+                        <!-- Project 1 -->
+                        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="project-media">
+                                <video autoplay loop muted playsinline class="project-video">
+                                    <source src="https://assets.mixkit.co/videos/preview/mixkit-geometric-pattern-abstract-close-up-1247-large.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <h3 class="project-title">Overmono</h3>
+                            <p class="project-tags">Motion Design • Art Direction</p>
+                            <p class="project-desc">A visual experiment exploring rhythm and distortion through a minimal, industrial aesthetic.</p>
+                        </div>
+                        <!-- Project 2 -->
+                        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="project-media">
+                                <div class="animated-gradient"></div>
+                            </div>
+                            <h3 class="project-title">Likorn</h3>
+                            <p class="project-tags">Motion Design • 3D Animation</p>
+                            <p class="project-desc">A digital study blending fluid simulations and minimal typography to create organic forms.</p>
+                        </div>
+                        <!-- Project 3 -->
+                        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="project-media">
+                                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Solo Model project">
+                            </div>
+                            <h3 class="project-title">Solo Model</h3>
+                            <p class="project-tags">Photography • Art Direction</p>
+                            <p class="project-desc">A stripped-down visual study focused on presence, light, and essential forms.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Approach Section with Expandable Items -->
+                <section id="approach" class="section approach" data-aos="fade-up">
+                    <h2 class="section-title">Our Approach</h2>
+                    <div class="services-accordion">
+                        <!-- Service 1 -->
+                        <div class="service-item">
+                            <div class="service-header">
+                                <h3><i class="fas fa-pen-fancy"></i> Creative Direction</h3>
+                                <span class="expand-icon">+</span>
+                            </div>
+                            <div class="service-details">
+                                <p>Codifying the creative language of your brand across every touchpoint for clarity and impact at scale.</p>
+                                <ul>
+                                    <li><strong>Creative Platform:</strong> Defining the core idea, tone and territories</li>
+                                    <li><strong>Visual Language:</strong> Typography, color, grids, art direction</li>
+                                    <li><strong>Narrative Systems:</strong> Messaging architecture, voice & tone</li>
+                                    <li><strong>Design Ops:</strong> Components, specs and QA for consistency</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Service 2 -->
+                        <div class="service-item">
+                            <div class="service-header">
+                                <h3><i class="fas fa-film"></i> Film & Motion Design</h3>
+                                <span class="expand-icon">+</span>
+                            </div>
+                            <div class="service-details">
+                                <p>Developing motion language and transitions to bring stories to life.</p>
+                                <ul>
+                                    <li><strong>Motion Language:</strong> Transitions, type in motion, micro-interactions</li>
+                                    <li><strong>Film Direction:</strong> Live-action & CG direction for brand films</li>
+                                    <li><strong>3D & Animation:</strong> Product visualizations and sequences</li>
+                                    <li><strong>AI-Aided Workflows:</strong> Prototyping and asset generation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Footer -->
+                <footer id="contact" class="footer" data-aos="fade-up">
+                    <div class="footer-content">
+                        <h2>Let's collaborate.</h2>
+                        <p>We work with founders and creative brands to translate vision into form and code.</p>
+                        <a href="mailto:hello@example.com" class="contact-link">hello@example.com →</a>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>© <span id="current-year">2024</span> Your Portfolio Name. All rights reserved.</p>
+                    </div>
+                </footer>
+                
+            </div> <!-- End content-wrapper -->
+        </section> <!-- End cutoff-content -->
+    </div> <!-- End scroll-container -->
 
-    <!-- Approach / Services -->
-<section id="approach" class="section approach" data-aos="fade-up">
-        <h2 class="section-title">Our Approach</h2>
-        <div class="services-list">
-            <div class="service-item">
-                <h3><i class="fas fa-pen-fancy"></i> Creative Direction</h3>
-                <p>Codifying the creative language of your brand across every touchpoint for clarity and impact.</p>
-            </div>
-            <div class="service-item">
-                <h3><i class="fas fa-film"></i> Film & Motion Design</h3>
-                <p>Developing motion language and transitions to bring stories to life.</p>
-            </div>
-            <!-- Add more services -->
-        </div>
-    </section>
-
-    <!-- Footer / Contact -->
-<footer id="contact" class="footer" data-aos="fade-up">
-        <div class="footer-content">
-            <h2>Let's collaborate.</h2>
-            <p>We work with founders and creative brands to translate vision into form and code.</p>
-            <a href="mailto:hello@example.com" class="contact-link">hello@example.com →</a>
-        </div>
-        <div class="footer-bottom">
-            <p>© <span id="current-year">2024</span> Your Portfolio Name. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Link to our simple JavaScript file -->
-    <script src="script.js"></script>
-<!-- AOS Library for Scroll Animations -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  // Initialize AOS
-  AOS.init({
-    duration: 800, // Animation duration in ms
-    once: true, // Animation happens only once
-    offset: 100 // When to trigger (px from bottom)
-  });
-</script>
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS (scroll animations)
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+        
+        // Update copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Expandable services functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const serviceHeaders = document.querySelectorAll('.service-header');
+            
+            serviceHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const serviceItem = this.parentElement;
+                    const isActive = serviceItem.classList.contains('active');
+                    
+                    // Close all other items
+                    document.querySelectorAll('.service-item').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    
+                    // If this wasn't active, open it
+                    if (!isActive) {
+                        serviceItem.classList.add('active');
+                    }
+                });
+            });
+            
+            // Open first service by default
+            if (serviceHeaders.length > 0) {
+                serviceHeaders[0].parentElement.classList.add('active');
+            }
+            
+            // Navbar scroll effect
+            const navbar = document.getElementById('navbar');
+            const heroSection = document.querySelector('.sticky-hero');
+            
+            window.addEventListener('scroll', function() {
+                const scrollY = window.scrollY;
+                const heroHeight = heroSection.offsetHeight;
+                
+                // Change navbar style when past hero section
+                if (scrollY > heroHeight * 0.3) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+                
+                // Parallax effect on hero video
+                const heroVideo = document.querySelector('.hero-video');
+                if (heroVideo) {
+                    const videoTranslate = scrollY * 0.5;
+                    heroVideo.style.transform = `translateY(${videoTranslate}px)`;
+                }
+                
+                // Fade out hero content
+                const heroContent = document.querySelector('.hero-content');
+                if (heroContent) {
+                    const opacity = 1 - Math.min(scrollY / (heroHeight * 0.7), 1);
+                    heroContent.style.opacity = opacity;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
