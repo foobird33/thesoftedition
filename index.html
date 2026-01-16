@@ -1,302 +1,893 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soft Archive — A living record of contemporary craft</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Premium Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Scroll Animations -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">SOFT ARCHIVE</a>
-            
-            <!-- Desktop Navigation -->
-            <div class="nav-links">
-                <a href="#home" class="active">Home</a>
-                <div class="dropdown">
-                    <a href="#volumes" class="dropbtn">Work <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-content">
-                        <a href="#volumes">Volumes</a>
-                        <a href="#objects">Objects</a>
-                        <a href="#artists">Artists</a>
-                    </div>
-                </div>
-                <a href="#journal">Journal</a>
-                <a href="#archive">Archive</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </div>
-            
-            <!-- Mobile Menu -->
-            <button class="menu-toggle" id="menuToggle">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-        
-        <div class="mobile-nav" id="mobileNav">
-            <a href="#home" class="active">Home</a>
-            <a href="#volumes">Volumes</a>
-            <a href="#objects">Objects</a>
-            <a href="#artists">Artists</a>
-            <a href="#journal">Journal</a>
-            <a href="#archive">Archive</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+/* ===== RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- Main Container -->
-    <div class="scroll-container" id="home">
-        
-        <!-- Cinematic Hero -->
-        <section class="sticky-hero">
-            <div class="hero-video-container">
-                <video autoplay loop muted playsinline class="hero-video">
-                    <source src="https://assets.mixkit.co/videos/preview/mixkit-hands-shaping-clay-on-a-pottery-wheel-34557-large.mp4" type="video/mp4">
-                </video>
-                <div class="video-overlay"></div>
-                
-                <div class="hero-content">
-                    <h1 class="hero-title">A living record<br>of contemporary craft</h1>
-                    <p class="hero-subtitle">Scroll to explore the archive</p>
-                    <div class="scroll-hint">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 5v14M5 12l7 7 7-7"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Content Section -->
-        <section class="cutoff-content">
-            <div class="cutoff-shape"></div>
-            
-            <div class="content-wrapper">
-                
-                <!-- Editorial Statement -->
-                <section class="section statement" data-aos="fade-up">
-                    <div class="statement-content">
-                        <p class="statement-large">Soft Archive is an editorial imprint dedicated to documenting and releasing contemporary craft through a series of curated volumes.</p>
-                        <div class="statement-text">
-                            <p>Each volume presents a limited selection of objects by independent artists, chosen for their material integrity, quiet expression, and relevance to the present moment. Objects are released in small editions and, once unavailable, remain as part of the archive.</p>
-                        </div>
-                    </div>
-                </section>
-                
-                <!-- Volumes Section -->
-                <section id="volumes" class="section volumes-section">
-                    <div class="section-header-container">
-                        <h2 class="rotated-title" data-aos="fade-right">Volumes</h2>
-                        <div class="volumes-content">
-                            <div class="volumes-grid staggered" data-aos="fade-up">
-                                <!-- Volume 01 -->
-                                <a href="volume-01.html" class="volume-card portrait staggered-item-1">
-                                    <div class="volume-image">
-                                        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Clay & Quiet">
-                                        <div class="volume-overlay-box">
-                                            <div class="volume-overlay-content">
-                                                <div class="overlay-title">Clay & Quiet</div>
-                                                <div class="overlay-desc">A curated selection of contemporary ceramic objects exploring restraint, tactility, and everyday ritual.</div>
-                                                <div class="overlay-meta">
-                                                    <span>12 objects</span> • <span>5 artists</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                
-                                <!-- Volume 02 -->
-                                <a href="volume-02.html" class="volume-card portrait staggered-item-2">
-                                    <div class="volume-image">
-                                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Surface & Depth">
-                                        <div class="coming-soon">Coming Soon</div>
-                                        <div class="volume-overlay-box">
-                                            <div class="volume-overlay-content">
-                                                <div class="overlay-title">Surface & Depth</div>
-                                                <div class="overlay-desc">An investigation into texture, layering, and the dialogue between material and form in contemporary fiber arts.</div>
-                                                <div class="overlay-meta">
-                                                    <span>Launching 2024</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                
-                                <!-- Volume 03 -->
-                                <a href="volume-03.html" class="volume-card portrait staggered-item-3">
-                                    <div class="volume-image">
-                                        <img src="https://images.unsplash.com/photo-1536924430914-91f9e2041b83?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Thread Memory">
-                                        <div class="coming-soon">Coming Soon</div>
-                                        <div class="volume-overlay-box">
-                                            <div class="volume-overlay-content">
-                                                <div class="overlay-title">Thread Memory</div>
-                                                <div class="overlay-desc">Exploring woven narratives and the preservation of technique through contemporary textile practices.</div>
-                                                <div class="overlay-meta">
-                                                    <span>In Development</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                
-                                <!-- Volume 04 (Placeholder) -->
-                                <a href="#" class="volume-card portrait staggered-item-4">
-                                    <div class="volume-image">
-                                        <div class="volume-placeholder">
-                                            <span class="placeholder-text">Volume 04<br><em>In development</em></span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <!-- Mid-page Cinematic Banner -->
-                <section class="mid-banner" data-aos="fade-up">
-                    <div class="banner-video-container">
-                        <video autoplay loop muted playsinline class="banner-video">
-                            <source src="https://assets.mixkit.co/videos/preview/mixkit-textile-factory-worker-34560-large.mp4" type="video/mp4">
-                        </video>
-                        <div class="banner-overlay"></div>
-                        <div class="banner-content">
-                            <p class="banner-text">Preserving moments<br>in material form</p>
-                        </div>
-                    </div>
-                </section>
-                
-                <!-- About Section -->
-                <section id="about" class="section about-section">
-                    <div class="section-header-container">
-                        <h2 class="rotated-title" data-aos="fade-right">About</h2>
-                        <div class="about-content" data-aos="fade-up">
-                            <p class="about-large">Soft Archive is an independent editorial project focused on contemporary craft.</p>
-                            <div class="about-text">
-                                <p>We work with artists to document and release objects in limited volumes, treating each release as a moment in time — to be collected, used, and remembered. Our approach is archival, not commercial. Each object is photographed, described, and contextualized with the same care given to a museum acquisition.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <!-- Contact Section -->
-                <section id="contact" class="section contact-section" data-aos="fade-up">
-                    <div class="contact-content centered">
-                        <p class="contact-lead">Let's collaborate</p>
-                        <p class="contact-desc">We work with artists to showcase their works and the stories behind them.</p>
-                        <p class="contact-note">For enquiries related to volumes, artists, press, or collaboration:</p>
-                        <a href="mailto:hello@softarchive.com" class="contact-email">hello@softarchive.com</a>
-                    </div>
-                </section>
-                
-                <!-- Footer -->
-                <footer class="footer">
-                    <div class="footer-content">
-                        <div class="footer-nav">
-                            <div class="footer-column">
-                                <h4>SOFT ARCHIVE</h4>
-                                <a href="#home">Home</a>
-                                <a href="#about">About</a>
-                                <a href="#contact">Contact</a>
-                            </div>
-                            <div class="footer-column">
-                                <h4>EXPLORE</h4>
-                                <a href="#volumes">Volumes</a>
-                                <a href="#objects">Objects</a>
-                                <a href="#artists">Artists</a>
-                                <a href="#journal">Journal</a>
-                                <a href="#archive">Archive</a>
-                            </div>
-                            <div class="footer-column">
-                                <h4>CONNECT</h4>
-                                <a href="#">Instagram</a>
-                                <a href="#">Newsletter</a>
-                                <a href="#">Press Kit</a>
-                            </div>
-                        </div>
-                        
-                        <div class="footer-bottom">
-                            <p>© <span id="current-year">2024</span> Soft Archive. An editorial imprint documenting contemporary craft.</p>
-                            <p class="footer-note">All works are released in limited editions and, once unavailable, remain archived for reference and study.</p>
-                        </div>
-                    </div>
-                </footer>
-                
-            </div>
-        </section>
-    </div>
+html {
+    scroll-behavior: smooth;
+}
 
-    <!-- JavaScript -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100
-        });
-        
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-        
-        const menuToggle = document.getElementById('menuToggle');
-        const mobileNav = document.getElementById('mobileNav');
-        
-        menuToggle.addEventListener('click', function() {
-            mobileNav.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-        });
-        
-        const navbar = document.getElementById('navbar');
-        const heroSection = document.querySelector('.sticky-hero');
-        
-        window.addEventListener('scroll', function() {
-            const scrollY = window.scrollY;
-            const heroHeight = heroSection.offsetHeight;
-            
-            if (scrollY > heroHeight * 0.3) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-            
-            const heroVideo = document.querySelector('.hero-video');
-            if (heroVideo) {
-                const videoTranslate = scrollY * 0.5;
-                heroVideo.style.transform = `translateY(${videoTranslate}px)`;
-            }
-            
-            const heroContent = document.querySelector('.hero-content');
-            if (heroContent) {
-                const opacity = 1 - Math.min(scrollY / (heroHeight * 0.7), 1);
-                heroContent.style.opacity = opacity;
-            }
-        });
-        
-        document.querySelectorAll('.mobile-nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileNav.classList.remove('active');
-                menuToggle.classList.remove('active');
-            });
-        });
-        
-        // Volume overlay hover effect
-        document.querySelectorAll('.volume-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.querySelector('.volume-overlay-box').style.opacity = '1';
-            });
-            card.addEventListener('mouseleave', function() {
-                this.querySelector('.volume-overlay-box').style.opacity = '0';
-            });
-        });
-    </script>
-</body>
-</html>
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background-color: #fefdfb;
+    overflow-x: hidden;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, .hero-title, .statement-large, .about-large,
+.rotated-title, .contact-lead, .banner-text, .overlay-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+/* ===== NAVIGATION ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 28px 40px;
+    z-index: 1000;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+}
+
+.navbar.scrolled {
+    background-color: rgba(254, 253, 251, 0.97);
+    backdrop-filter: blur(12px);
+    padding: 20px 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navbar.scrolled .logo {
+    color: #1a1a1a;
+}
+
+/* Desktop Navigation */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.nav-links a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.92);
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.navbar.scrolled .nav-links a {
+    color: #555;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: white;
+}
+
+.navbar.scrolled .nav-links a:hover,
+.navbar.scrolled .nav-links a.active {
+    color: #1a1a1a;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    background-color: rgba(254, 253, 251, 0.97);
+    backdrop-filter: blur(12px);
+    min-width: 160px;
+    padding: 20px 0;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    color: #555;
+    padding: 8px 24px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    color: #1a1a1a;
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown .dropbtn i {
+    font-size: 0.7rem;
+    margin-left: 6px;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 1px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.navbar.scrolled .menu-toggle span {
+    background-color: #1a1a1a;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(254, 253, 251, 0.98);
+    backdrop-filter: blur(12px);
+    padding: 40px;
+    flex-direction: column;
+    gap: 24px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mobile-nav.active {
+    display: flex;
+}
+
+.mobile-nav a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #555;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.mobile-nav a:hover,
+.mobile-nav a.active {
+    color: #1a1a1a;
+}
+
+/* ===== CINEMATIC HERO ===== */
+.scroll-container {
+    position: relative;
+}
+
+.sticky-hero {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hero-video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.85) contrast(1.1) saturate(1.05);
+    transition: transform 0.1s linear;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.25) 0%,
+        rgba(0, 0, 0, 0.45) 50%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+    z-index: 1;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 90%;
+    max-width: 1000px;
+    z-index: 2;
+    padding: 0 20px;
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+.hero-title {
+    font-size: clamp(3.2rem, 6.5vw, 5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    margin-bottom: 24px;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.scroll-hint {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    color: white;
+    opacity: 0.7;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+    40% { transform: translateX(-50%) translateY(-8px); }
+    60% { transform: translateX(-50%) translateY(-4px); }
+}
+
+/* ===== CUTOFF CONTENT ===== */
+.cutoff-content {
+    position: relative;
+    background: #fefdfb;
+    margin-top: -20vh;
+    padding-top: 30vh;
+    z-index: 2;
+}
+
+.cutoff-shape {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: #fefdfb;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 50%);
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 3;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 60px 80px 60px;
+}
+
+/* ===== EDITORIAL STATEMENT ===== */
+.statement {
+    padding: 120px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.statement-content {
+    max-width: 900px;
+}
+
+.statement-large {
+    font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+    line-height: 1.15;
+    color: #1a1a1a;
+    margin-bottom: 40px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.statement-text {
+    max-width: 700px;
+}
+
+.statement-text p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* ===== VOLUMES SECTION ===== */
+.volumes-section {
+    padding: 120px 0 60px 0;
+}
+
+.section-header-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.rotated-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 5rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.08);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 1;
+    margin: 0;
+    padding-top: 20px;
+    position: sticky;
+    top: 140px;
+}
+
+.volumes-content {
+    flex: 1;
+}
+
+/* Editorial Magazine Ratio (3:4) */
+.volumes-grid.staggered {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px 40px;
+    position: relative;
+}
+
+/* Staggered positioning */
+.staggered-item-1 {
+    margin-top: 0;
+}
+
+.staggered-item-2 {
+    margin-top: 80px;
+}
+
+.staggered-item-3 {
+    margin-top: 40px;
+}
+
+.volume-card.editorial {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.volume-card.editorial:hover {
+    transform: translateY(-5px);
+}
+
+.volume-image {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 133.33%; /* 3:4 Magazine Ratio */
+    overflow: hidden;
+}
+
+.volume-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.volume-card.editorial:hover .volume-image img {
+    transform: scale(1.03);
+}
+
+/* Black transparent overlay box */
+.volume-overlay-box {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 380px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.overlay-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 15px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.overlay-desc {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.overlay-meta {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.overlay-meta span {
+    margin: 0 5px;
+}
+
+.coming-soon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #1a1a1a;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 300;
+    z-index: 2;
+}
+
+/* ===== FULL-WIDTH CINEMATIC BANNER ===== */
+.full-width-banner {
+    margin: 60px -60px;
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    width: calc(100% + 120px);
+}
+
+.banner-video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8) contrast(1.1);
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 90%;
+    max-width: 1000px;
+    z-index: 2;
+}
+
+.banner-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-section {
+    padding: 60px 0 120px 0;
+}
+
+.about-content {
+    max-width: 900px;
+}
+
+.about-large {
+    font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+    line-height: 1.15;
+    color: #1a1a1a;
+    margin-bottom: 40px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.about-text {
+    max-width: 700px;
+}
+
+.about-text p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+    padding: 120px 0 80px 0;
+    text-align: center;
+}
+
+.contact-content.centered {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-lead {
+    font-size: 2.8rem;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.contact-desc {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.contact-note {
+    color: #777;
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 0.95rem;
+}
+
+.contact-email {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    text-decoration: none;
+    border-bottom: 1.5px solid #1a1a1a;
+    padding-bottom: 3px;
+    transition: all 0.3s ease;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.contact-email:hover {
+    color: #888;
+    border-bottom-color: #888;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    padding: 80px 0 40px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.footer-column h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.footer-column a {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+    font-weight: 300;
+}
+
+.footer-column a:hover {
+    color: #1a1a1a;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    padding-top: 40px;
+    color: #888;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-bottom p {
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.footer-note {
+    font-size: 0.85rem;
+    color: #999;
+    font-style: italic;
+    max-width: 500px;
+    line-height: 1.5;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1400px) {
+    .content-wrapper {
+        padding: 0 40px 60px 40px;
+    }
+    
+    .full-width-banner {
+        margin: 60px -40px;
+        width: calc(100% + 80px);
+    }
+    
+    .volumes-grid.staggered {
+        gap: 40px 30px;
+    }
+    
+    .volume-overlay-box {
+        width: 320px;
+        padding: 25px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .rotated-title {
+        font-size: 4rem;
+    }
+    
+    .section-header-container {
+        gap: 60px;
+    }
+    
+    .volumes-grid.staggered {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    
+    .staggered-item-1,
+    .staggered-item-2,
+    .staggered-item-3 {
+        margin-top: 0;
+    }
+    
+    .volume-overlay-box {
+        width: 350px;
+    }
+    
+    .full-width-banner {
+        height: 400px;
+        margin: 60px -40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 25px 20px;
+    }
+    
+    .navbar.scrolled {
+        padding: 15px 20px;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .content-wrapper {
+        padding: 0 20px 40px 20px;
+    }
+    
+    .full-width-banner {
+        margin: 40px -20px;
+        width: calc(100% + 40px);
+        height: 300px;
+    }
+    
+    .cutoff-content {
+        margin-top: -15vh;
+        padding-top: 25vh;
+    }
+    
+    .cutoff-shape {
+        height: 80px;
+    }
+    
+    .statement,
+    .volumes-section,
+    .about-section,
+    .contact-section {
+        padding: 80px 0;
+    }
+    
+    .section-header-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .rotated-title {
+        writing-mode: horizontal-tb;
+        transform: none;
+        font-size: 3rem;
+        color: #1a1a1a;
+        padding-top: 0;
+        position: static;
+        text-align: center;
+    }
+    
+    .volume-overlay-box {
+        width: 280px;
+        padding: 20px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .overlay-title {
+        font-size: 1.5rem;
+    }
+    
+    .overlay-desc {
+        font-size: 0.9rem;
+    }
+    
+    .banner-text {
+        font-size: 2rem;
+    }
+    
+    .statement-large,
+    .about-large {
+        font-size: 1.8rem;
+    }
+    
+    .contact-lead {
+        font-size: 2.2rem;
+    }
+    
+    .footer {
+        padding: 60px 0 30px 0;
+    }
+    
+    .footer-nav {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .volume-overlay-box {
+        width: 90%;
+        left: 5%;
+        right: 5%;
+        bottom: 20px;
+    }
+    
+    .statement-text p,
+    .about-text p {
+        font-size: 1rem;
+    }
+    
+    .full-width-banner {
+        height: 250px;
+    }
+}
