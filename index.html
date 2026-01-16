@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soft Archive — A living record of contemporary craft</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
+    <!-- Premium Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Scroll Animations -->
@@ -37,13 +37,12 @@
                 <a href="#contact">Contact</a>
             </div>
             
-            <!-- Mobile Menu Toggle -->
+            <!-- Mobile Menu -->
             <button class="menu-toggle" id="menuToggle">
                 <span></span><span></span><span></span>
             </button>
         </div>
         
-        <!-- Mobile Navigation -->
         <div class="mobile-nav" id="mobileNav">
             <a href="#home" class="active">Home</a>
             <a href="#volumes">Volumes</a>
@@ -56,22 +55,19 @@
         </div>
     </nav>
 
-    <!-- Main Cinematic Container -->
+    <!-- Main Container -->
     <div class="scroll-container" id="home">
         
-        <!-- 1. STICKY HERO SECTION -->
+        <!-- Cinematic Hero -->
         <section class="sticky-hero">
             <div class="hero-video-container">
-                <!-- Video Background -->
                 <video autoplay loop muted playsinline class="hero-video">
                     <source src="https://assets.mixkit.co/videos/preview/mixkit-hands-shaping-clay-on-a-pottery-wheel-34557-large.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
                 </video>
                 <div class="video-overlay"></div>
                 
-                <!-- Hero Content -->
                 <div class="hero-content">
-                    <h1 class="hero-title">A living record of contemporary craft</h1>
+                    <h1 class="hero-title">A living record<br>of contemporary craft</h1>
                     <p class="hero-subtitle">Scroll to explore the archive</p>
                     <div class="scroll-hint">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -82,86 +78,105 @@
             </div>
         </section>
         
-        <!-- 2. CUTOFF CONTENT SECTION -->
+        <!-- Content Section -->
         <section class="cutoff-content">
             <div class="cutoff-shape"></div>
             
             <div class="content-wrapper">
                 
-                <!-- Intro Section -->
-                <section class="section intro" data-aos="fade-up">
-                    <div class="intro-content">
-                        <h2 class="section-title">Editorial Imprint</h2>
-                        <p class="intro-large">Soft Archive is an editorial imprint dedicated to documenting and releasing contemporary craft through a series of curated volumes.</p>
-                        <p>Each volume presents a limited selection of objects by independent artists, chosen for their material integrity, quiet expression, and relevance to the present moment.</p>
-                        <p>Objects are released in small editions and, once unavailable, remain as part of the archive.</p>
+                <!-- Editorial Statement -->
+                <section class="section statement" data-aos="fade-up">
+                    <div class="statement-content">
+                        <p class="statement-large">Soft Archive is an editorial imprint dedicated to documenting and releasing contemporary craft through a series of curated volumes.</p>
+                        <div class="statement-grid">
+                            <p>Each volume presents a limited selection of objects by independent artists, chosen for their material integrity, quiet expression, and relevance to the present moment.</p>
+                            <p>Objects are released in small editions and, once unavailable, remain as part of the archive.</p>
+                        </div>
                     </div>
                 </section>
                 
                 <!-- Volumes Section -->
-                <section id="volumes" class="section volumes" data-aos="fade-up">
-                    <h2 class="section-title">Volumes</h2>
-                    <div class="volumes-grid">
-                        <!-- Volume 01 -->
-                        <a href="volume-01.html" class="volume-card" data-aos="fade-up" data-aos-delay="100">
-                            <div class="volume-number">01</div>
-                            <h3 class="volume-title">Clay & Quiet</h3>
-                            <p class="volume-desc">A curated selection of contemporary ceramic objects exploring restraint, tactility, and everyday ritual.</p>
-                            <div class="volume-meta">
-                                <span class="meta-item">12 objects</span>
-                                <span class="meta-divider">•</span>
-                                <span class="meta-item">5 artists</span>
+                <section id="volumes" class="section volumes-section">
+                    <div class="section-header-container">
+                        <h2 class="rotated-title" data-aos="fade-right">Volumes</h2>
+                        <div class="volumes-content">
+                            <div class="volumes-grid" data-aos="fade-up">
+                                <!-- Volume 01 -->
+                                <a href="volume-01.html" class="volume-card portrait">
+                                    <div class="volume-image">
+                                        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Clay & Quiet">
+                                        <div class="volume-overlay">
+                                            <span class="view-volume">View Volume →</span>
+                                        </div>
+                                    </div>
+                                    <div class="volume-info">
+                                        <div class="volume-number">01</div>
+                                        <h3 class="volume-title">Clay & Quiet</h3>
+                                        <p class="volume-desc">A curated selection of contemporary ceramic objects exploring restraint, tactility, and everyday ritual.</p>
+                                        <div class="volume-meta">
+                                            <span class="meta-item">12 objects</span>
+                                            <span class="meta-divider">•</span>
+                                            <span class="meta-item">5 artists</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                
+                                <!-- Volume 02 -->
+                                <a href="volume-02.html" class="volume-card portrait">
+                                    <div class="volume-image">
+                                        <div class="coming-soon">Coming Soon</div>
+                                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Surface & Depth">
+                                    </div>
+                                    <div class="volume-info">
+                                        <div class="volume-number">02</div>
+                                        <h3 class="volume-title">Surface & Depth</h3>
+                                        <p class="volume-desc">An investigation into texture, layering, and the dialogue between material and form in contemporary fiber arts.</p>
+                                        <div class="volume-meta">
+                                            <span class="meta-item">Launching 2024</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                
+                                <!-- Volume 03 -->
+                                <a href="volume-03.html" class="volume-card portrait">
+                                    <div class="volume-image">
+                                        <div class="coming-soon">Coming Soon</div>
+                                        <img src="https://images.unsplash.com/photo-1536924430914-91f9e2041b83?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Thread Memory">
+                                    </div>
+                                    <div class="volume-info">
+                                        <div class="volume-number">03</div>
+                                        <h3 class="volume-title">Thread Memory</h3>
+                                        <p class="volume-desc">Exploring woven narratives and the preservation of technique through contemporary textile practices.</p>
+                                        <div class="volume-meta">
+                                            <span class="meta-item">In Development</span>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="volume-hover">
-                                <span class="hover-text">Explore Volume</span>
-                            </div>
-                        </a>
-                        
-                        <!-- Volume 02 -->
-                        <a href="volume-02.html" class="volume-card" data-aos="fade-up" data-aos-delay="200">
-                            <div class="volume-number">02</div>
-                            <h3 class="volume-title">Surface & Depth</h3>
-                            <p class="volume-desc">An investigation into texture, layering, and the dialogue between material and form in contemporary fiber arts.</p>
-                            <div class="volume-meta">
-                                <span class="meta-item">Coming soon</span>
-                            </div>
-                            <div class="volume-hover">
-                                <span class="hover-text">Explore Volume</span>
-                            </div>
-                        </a>
-                        
-                        <!-- Volume 03 -->
-                        <a href="volume-03.html" class="volume-card" data-aos="fade-up" data-aos-delay="300">
-                            <div class="volume-number">03</div>
-                            <h3 class="volume-title">Thread Memory</h3>
-                            <p class="volume-desc">Exploring woven narratives and the preservation of technique through contemporary textile practices.</p>
-                            <div class="volume-meta">
-                                <span class="meta-item">Coming soon</span>
-                            </div>
-                            <div class="volume-hover">
-                                <span class="hover-text">Explore Volume</span>
-                            </div>
-                        </a>
+                        </div>
                     </div>
                 </section>
                 
                 <!-- About Section -->
-                <section id="about" class="section about" data-aos="fade-up">
-                    <h2 class="section-title">About</h2>
-                    <div class="about-content">
-                        <p class="about-large">Soft Archive is an independent editorial project focused on contemporary craft.</p>
-                        <p>We work with artists to document and release objects in limited volumes, treating each release as a moment in time — to be collected, used, and remembered.</p>
-                        <p>Our approach is archival, not commercial. Each object is photographed, described, and contextualized with the same care given to a museum acquisition.</p>
+                <section id="about" class="section about-section">
+                    <div class="section-header-container">
+                        <h2 class="rotated-title" data-aos="fade-right">About</h2>
+                        <div class="about-content" data-aos="fade-up">
+                            <p class="about-large">Soft Archive is an independent editorial project focused on contemporary craft.</p>
+                            <div class="about-grid">
+                                <p>We work with artists to document and release objects in limited volumes, treating each release as a moment in time — to be collected, used, and remembered.</p>
+                                <p>Our approach is archival, not commercial. Each object is photographed, described, and contextualized with the same care given to a museum acquisition.</p>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 
                 <!-- Contact Section -->
-                <section id="contact" class="section contact" data-aos="fade-up">
-                    <h2 class="section-title">Contact</h2>
-                    <div class="contact-content">
-                        <h3 class="contact-title">Let's collaborate</h3>
+                <section id="contact" class="section contact-section" data-aos="fade-up">
+                    <div class="contact-content centered">
+                        <p class="contact-lead">Let's collaborate</p>
                         <p class="contact-desc">We work with artists to showcase their works and the stories behind them.</p>
-                        <p>For enquiries related to volumes, artists, press, or collaboration:</p>
+                        <p class="contact-note">For enquiries related to volumes, artists, press, or collaboration:</p>
                         <a href="mailto:hello@softarchive.com" class="contact-email">hello@softarchive.com</a>
                     </div>
                 </section>
@@ -169,7 +184,6 @@
                 <!-- Footer -->
                 <footer class="footer">
                     <div class="footer-content">
-                        <!-- Footer Navigation -->
                         <div class="footer-nav">
                             <div class="footer-column">
                                 <h4>Soft Archive</h4>
@@ -189,11 +203,10 @@
                                 <h4>Connect</h4>
                                 <a href="#">Instagram</a>
                                 <a href="#">Newsletter</a>
-                                <a href="#">Press</a>
+                                <a href="#">Press Kit</a>
                             </div>
                         </div>
                         
-                        <!-- Copyright -->
                         <div class="footer-bottom">
                             <p>© <span id="current-year">2024</span> Soft Archive. An editorial imprint documenting contemporary craft.</p>
                             <p class="footer-note">All works are released in limited editions. Once unavailable, objects remain archived for reference and study.</p>
@@ -201,24 +214,21 @@
                     </div>
                 </footer>
                 
-            </div> <!-- End content-wrapper -->
-        </section> <!-- End cutoff-content -->
-    </div> <!-- End scroll-container -->
+            </div>
+        </section>
+    </div>
 
     <!-- JavaScript -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Initialize AOS
         AOS.init({
             duration: 800,
             once: true,
             offset: 100
         });
         
-        // Update copyright year
         document.getElementById('current-year').textContent = new Date().getFullYear();
         
-        // Mobile menu toggle
         const menuToggle = document.getElementById('menuToggle');
         const mobileNav = document.getElementById('mobileNav');
         
@@ -227,7 +237,6 @@
             menuToggle.classList.toggle('active');
         });
         
-        // Navbar scroll effect
         const navbar = document.getElementById('navbar');
         const heroSection = document.querySelector('.sticky-hero');
         
@@ -235,21 +244,18 @@
             const scrollY = window.scrollY;
             const heroHeight = heroSection.offsetHeight;
             
-            // Change navbar style when past hero section
             if (scrollY > heroHeight * 0.3) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
             }
             
-            // Parallax effect on hero video
             const heroVideo = document.querySelector('.hero-video');
             if (heroVideo) {
                 const videoTranslate = scrollY * 0.5;
                 heroVideo.style.transform = `translateY(${videoTranslate}px)`;
             }
             
-            // Fade out hero content
             const heroContent = document.querySelector('.hero-content');
             if (heroContent) {
                 const opacity = 1 - Math.min(scrollY / (heroHeight * 0.7), 1);
@@ -257,7 +263,6 @@
             }
         });
         
-        // Close mobile menu when clicking a link
         document.querySelectorAll('.mobile-nav a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileNav.classList.remove('active');
