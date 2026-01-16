@@ -103,8 +103,8 @@
                                 <!-- Volume 01 -->
                                 <a href="volume-01.html" class="volume-card editorial staggered-item-1">
                                     <div class="volume-image">
-                                        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Clay & Quiet">
-                                        <div class="volume-overlay-box">
+                                        <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Clay & Quiet">
+                                        <div class="volume-overlay-box visible">
                                             <div class="volume-overlay-content">
                                                 <div class="overlay-title">Clay & Quiet</div>
                                                 <div class="overlay-desc">A curated selection of contemporary ceramic objects exploring restraint, tactility, and everyday ritual.</div>
@@ -119,9 +119,9 @@
                                 <!-- Volume 02 -->
                                 <a href="volume-02.html" class="volume-card editorial staggered-item-2">
                                     <div class="volume-image">
-                                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Surface & Depth">
+                                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Surface & Depth">
                                         <div class="coming-soon">Coming Soon</div>
-                                        <div class="volume-overlay-box">
+                                        <div class="volume-overlay-box visible">
                                             <div class="volume-overlay-content">
                                                 <div class="overlay-title">Surface & Depth</div>
                                                 <div class="overlay-desc">An investigation into texture, layering, and the dialogue between material and form in contemporary fiber arts.</div>
@@ -136,9 +136,9 @@
                                 <!-- Volume 03 -->
                                 <a href="volume-03.html" class="volume-card editorial staggered-item-3">
                                     <div class="volume-image">
-                                        <img src="https://images.unsplash.com/photo-1536924430914-91f9e2041b83?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Thread Memory">
+                                        <img src="https://images.unsplash.com/photo-1536924430914-91f9e2041b83?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Thread Memory">
                                         <div class="coming-soon">Coming Soon</div>
-                                        <div class="volume-overlay-box">
+                                        <div class="volume-overlay-box visible">
                                             <div class="volume-overlay-content">
                                                 <div class="overlay-title">Thread Memory</div>
                                                 <div class="overlay-desc">Exploring woven narratives and the preservation of technique through contemporary textile practices.</div>
@@ -149,21 +149,40 @@
                                         </div>
                                     </div>
                                 </a>
+                                
+                                <!-- Volume 04 -->
+                                <a href="volume-04.html" class="volume-card editorial staggered-item-4">
+                                    <div class="volume-image">
+                                        <img src="https://images.unsplash.com/photo-1519744792096-4416dab04417?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Metal Echoes">
+                                        <div class="coming-soon">Coming Soon</div>
+                                        <div class="volume-overlay-box visible">
+                                            <div class="volume-overlay-content">
+                                                <div class="overlay-title">Metal Echoes</div>
+                                                <div class="overlay-desc">Documenting the tension between permanence and patina in contemporary metalwork and foundry arts.</div>
+                                                <div class="overlay-meta">
+                                                    <span>In Development</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <!-- View All Button -->
+                            <div class="view-all-container" data-aos="fade-up">
+                                <a href="volumes.html" class="view-all-button">VIEW ALL VOLUMES →</a>
                             </div>
                         </div>
                     </div>
                 </section>
                 
-                <!-- Full-width Cinematic Banner -->
+                <!-- Full-width Cinematic Banner (Edge-to-edge, no text) -->
                 <section class="full-width-banner" data-aos="fade-up">
                     <div class="banner-video-container">
                         <video autoplay loop muted playsinline class="banner-video">
                             <source src="https://assets.mixkit.co/videos/preview/mixkit-textile-factory-worker-34560-large.mp4" type="video/mp4">
                         </video>
                         <div class="banner-overlay"></div>
-                        <div class="banner-content">
-                            <p class="banner-text">Preserving moments<br>in material form</p>
-                        </div>
                     </div>
                 </section>
                 
@@ -179,6 +198,9 @@
                         </div>
                     </div>
                 </section>
+                
+                <!-- Page Break Divider -->
+                <div class="page-break"></div>
                 
                 <!-- Contact Section -->
                 <section id="contact" class="section contact-section" data-aos="fade-up">
@@ -279,13 +301,18 @@
             });
         });
         
-        // Volume overlay hover effect
+        // Volume card hover effects
         document.querySelectorAll('.volume-card').forEach(card => {
             card.addEventListener('mouseenter', function() {
-                this.querySelector('.volume-overlay-box').style.opacity = '1';
+                this.style.transform = 'translateY(-8px)';
+                const overlay = this.querySelector('.volume-overlay-box');
+                overlay.style.opacity = '1';
+                overlay.style.transform = 'translateY(0)';
             });
             card.addEventListener('mouseleave', function() {
-                this.querySelector('.volume-overlay-box').style.opacity = '0';
+                this.style.transform = 'translateY(0)';
+                const overlay = this.querySelector('.volume-overlay-box');
+                overlay.style.opacity = '1'; // Keep visible
             });
         });
     </script>
